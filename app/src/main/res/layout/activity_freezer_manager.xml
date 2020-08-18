@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    
+  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="54dip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    android:weightSum="100"
+    android:orientation="vertical"
+    >
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:text="@string/freezerAdd"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:autofillHints="" />
+
+
+    <EditText
+        android:id="@+id/editTextNumberTray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/anzahl_der_f_cher"
+        android:inputType="numberDecimal"
+        android:autofillHints="" />
+    
+
+
+     <Button
+         android:id="@+id/btnAdd"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/hinzuf_gen"
+         android:layout_gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/freezer_row"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:layout_marginBottom="70dip"/>
+
+
+
+
+
+</LinearLayout>
+

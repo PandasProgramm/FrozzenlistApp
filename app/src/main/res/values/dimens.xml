@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_screen_layout_margin">20dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!---activity freezer manager-->
+
+    <dimen name= "freezer_linearLayout_padding">15dip</dimen>
+    <dimen name= "freezer_textView_layout_height">100dp</dimen>
+    <dimen name= "freezer_textView_layout_textSize">18sp</dimen>
+    <dimen name= "freezer_recyclerview_widget_height">0dp</dimen>
+    <dimen name= "freezer_recyclerview_marginBottom">70dip</dimen>
+
+    <!---activity main-->
+
+    <dimen name= "activity_main_constraitlayout_widget_layout_width">386dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_marginStart">32dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_marginLeft">9dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_marginTop">64dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_marginEnd">32dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_marginBottom">12dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_width">327dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_heigth">77dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_marginStart">34dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_marginLeft">34dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_marginEnd">40dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_marginRight">40dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_registerButton_layout_marginBottom">124dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_widget_layout_signInButton_layout_width">327dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_signInButton_layout_heigth">77dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_signInButton_layout_marginEnd">28dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_signInButton_layout_marginRight">28dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_signInButton_layout_marginBottom">12dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_width">365dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_height">181dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_marginStart">8dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_marginLeft">8dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_marginTop">100dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_marginEnd">8dp</dimen>
+    <dimen name= "activity_main_constraitlayout_widget_layout_editText_linearLayout_Rigth">8dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_email_editText_layout_width">368dp</dimen>
+    <dimen name= "activity_main_constraitlayout_email_editText_layout_heigth">82dp</dimen>
+    <dimen name= "activity_main_constraitlayout_email_editText_layout_marginTop">5dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_passwort_editText_layout_width">369dp</dimen>
+    <dimen name= "activity_main_constraitlayout_passwort_editText_layout_heigth">86dp</dimen>
+    <dimen name= "activity_main_constraitlayout_passwort_editText_layout_marginTop">5dp</dimen>
+    <dimen name= "activity_main_constraitlayout_passwort_editText_layout_ems">10</dimen>
+
+    <dimen name= "activity_main_constraitlayout_editText_headline_layout_width">241dp</dimen>
+    <dimen name= "activity_main_constraitlayout_editText_headline_layout_heigth">47dp</dimen>
+    <dimen name= "activity_main_constraitlayout_editText_headline_layout_textSize">36sp</dimen>
+    <dimen name= "activity_main_constraitlayout_editText_headline_layout_editor">38dp</dimen>
+
+    <dimen name= "activity_main_constraitlayout_headline_width">392dp</dimen>
+    <dimen name= "activity_main_constraitlayout_headline_height">86dp</dimen>
+
+    <!---activity register-->
+
+    <dimen name= "activity_register_constraintlayout_widget_constraintLayout_width">372dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_constraintLayout_height">691dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_constraintLayout_marginEnd">20dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_constraintLayout_Right">20dp</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_Button_register_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_register_height">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_register_marginEnd">8dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_register_marginRight">8dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_register_marginBottom">32dp</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_height">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_marginStart">16dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_marginLeft">16dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_marginEnd">32dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_Button_cancel_marginRight">32dp</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_heigth">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginStart">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginLeft">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginTop">98dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginEnd">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginRight">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_marginBottom">10dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputName_ems">10</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_heigth">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginStart">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginLeft">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginTop">98dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginEnd">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginRight">27dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_marginBottom">10dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputEmail_ems">10</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_heigth">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_marginStart">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_marginLeft">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_marginEnd">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_marginRight">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_marginBottom">9dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_inputPasswort_ems">10</dimen>
+
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_width">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_heigth">0dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_marginStart">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_marginLeft">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_marginEnd">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_marginRight">26dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_marginBottom">259dp</dimen>
+    <dimen name= "activity_register_constraintlayout_widget_editText_passwortControl_ems">10</dimen>
+
+    <!--freezer row-->
+
+    <dimen name = "activity_freezer_row_layout_textView_textSize">30dip</dimen>
+
+    <!--tray manager -->
+    <dimen name = "activity_tray_manager_margin_size">20dp</dimen>
+    <dimen name="activity_tray_manager_toolbar_size">64dp</dimen>
+
+
+</resources>

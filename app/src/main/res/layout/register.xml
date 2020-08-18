@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/images"
+    tools:context=".Register">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="372dp"
+        android:layout_height="691dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <Button
+            android:id="@+id/btnRegistry"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/regristrieren"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCanellation"
+            app:layout_constraintTop_toBottomOf="@+id/bntControlPasswort" />
+
+        <Button
+            android:id="@+id/btnCanellation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:onClick="Register"
+            android:text="@string/abbruch"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRegistry"
+            app:layout_constraintEnd_toStartOf="@+id/btnRegistry"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnRegistry"
+            tools:ignore="OnClick" />
+
+        <EditText
+            android:id="@+id/bntInputName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/bntInputEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/bntInputEmail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/bntsetPasswort"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bntInputName" />
+
+        <EditText
+            android:id="@+id/bntsetPasswort"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_register_constraintlayout_widget_editText_inputPasswort_heigth"
+            android:layout_marginStart="@dimen/activity_register_constraintlayout_widget_editText_inputPasswort_marginStart"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="9dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_passwort"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/bntControlPasswort"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bntInputEmail" />
+
+        <EditText
+            android:id="@+id/bntControlPasswort"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="259dp"
+            android:ems="10"
+            android:hint="@string/hint_passwort"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegistry"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bntsetPasswort" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="producttyp">
+        <item>Gemüse</item>
+        <item>Schweinefleisch</item>
+        <item>Geflügel</item>
+        <item>Kalb</item>
+        <item>Lamm</item>
+        <item>Obst</item>
+        <item>Eis</item>
+        <item>Soßen</item>
+        <item>Fertiggerichte</item>
+        <item>Sonstiges</item>
+    </string-array>
+</resources>
