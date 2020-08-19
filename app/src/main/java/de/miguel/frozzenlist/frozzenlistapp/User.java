@@ -21,8 +21,12 @@ public class User implements Serializable {
     private String email;
     ArrayList<Freezer>freezers;
 
-
-    public User(String passwort,String email){
+    public User(String userName,String email, String passwort){
+        this.userName=userName;
+        this.email=email;
+        this.passwort=passwort;
+    }
+    public User(String email,String passwort){
         this.passwort=passwort;
         this.email=email;
         if(freezers==null){

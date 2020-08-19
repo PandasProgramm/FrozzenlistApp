@@ -47,15 +47,12 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        tools:listitem="@layout/freezer_row"
         android:id="@+id/recyclerView"
+        tools:listitem="@layout/freezer_row"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="100"
         android:layout_marginBottom="70dip"/>
-
-
-
 
 
 </LinearLayout>

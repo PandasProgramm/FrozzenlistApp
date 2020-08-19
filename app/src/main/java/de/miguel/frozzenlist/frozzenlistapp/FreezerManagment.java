@@ -34,6 +34,7 @@ public class FreezerManagment extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +59,7 @@ public class FreezerManagment extends AppCompatActivity {
     private void onButtonClick() {
         userManager.getUserList().get(position).freezers.add(new Freezer(inputName.getText().toString(), Integer.parseInt(inputNumberTrays.getText().toString())));
         userManager.saveList();
+        recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.getAdapter().notifyItemInserted(userManager.getUserList().get(position).freezers.size() - 1);
     }
 }

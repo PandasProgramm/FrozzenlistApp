@@ -48,19 +48,23 @@ public class LoginActivityMain extends Activity {
             inputPasswort.setError("Bitte Passwort eingeben");
             inputPasswort.requestFocus();
         }
-        if(!userEmail.isEmpty()&&!passwort.isEmpty()) {
 
+        if(!userEmail.isEmpty()&&!passwort.isEmpty()) {
             UserManager userManager= new UserManager(this);
             User user= new User(passwort,userEmail);
             for(int i = 0; i< userManager.getUserList().size(); i++){
 
-                User compareUser= (User) userManager.getUserList().get(i);
-
+                User compareUser= userManager.getUserList().get(i);
                 if(compareUser.getEmail().equals(user.getEmail())&&compareUser.getPasswort().
                         equals(user.getPasswort())){
                     Intent intent= new Intent(LoginActivityMain.this, FreezerManagment.class);
+                    Log.d("LoginActivityMain","jssj");
                     intent.putExtra("position", i);
                     startActivity(intent);
+                    Log.d("LoginActivityMain","jjj");
+                }
+                else{
+                    Log.d("LoginActivityMain","Stimmt mit keinem User überein");
                 }
             }
         }

@@ -3,8 +3,14 @@ package de.miguel.frozzenlist.frozzenlistapp;
 
 import android.content.Context;
 
-import com.orhanobut.hawk.Hawk;
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 /**
@@ -19,52 +25,63 @@ import java.util.ArrayList;
 public class UserManager {
 
     private ArrayList<User> userList;
+    OutputStream outputStream;
+    ObjectOutputStream objectOutputStream;
+   public static final String FILENAME="userList.txt";
+
+    InputStream inputStream;
+    ObjectInputStream objectInputStream;
+
 
     //Instance
     public UserManager(Context context){
-        Hawk.init(context).build();
+       // Hawk.init(context).build();
         loadList();
 
     }
 
+
+
     public void saveList(){
 
-     /*   try {
-            OutputStream outputStream= new FileOutputStream(new File("userList.txt"));
-            ObjectOutputStream objectOutputStream= new ObjectOutputStream(outputStream);
+
+        try {
+            outputStream= new FileOutputStream(FILENAME);
+            objectOutputStream= new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(userList);
             objectOutputStream.flush();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
 
-        Hawk.put("userList", userList);
+        //  Hawk.put("userList", userList);
 
     }
     public void loadList(){
 
-      /*  try{
-            InputStream inputStream=new FileInputStream("userList.txt");
-            ObjectInputStream objectInputStream= new ObjectInputStream(inputStream);
+        try{
+            inputStream=new FileInputStream("userList.txt");
+            objectInputStream= new ObjectInputStream(inputStream);
             userList= (ArrayList<User>) objectInputStream.readObject();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }*/
-       userList= Hawk.get("userList",new ArrayList<User>());
+        }
+     //  userList= Hawk.get("userList",new ArrayList<User>());
 
     }
     public void addUser(User user){
-        getUserList().add(user);
+        userList.add(user);
         saveList();
     }
     public void removeUser(int position){
-        getUserList().remove(position);
+        userList.remove(position);
         saveList();
     }
 
@@ -72,7 +89,4 @@ public class UserManager {
         return userList;
     }
 
-    public void setUserList(ArrayList<User> userList) {
-        this.userList = userList;
-    }
 }
