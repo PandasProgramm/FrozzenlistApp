@@ -25,6 +25,9 @@ public class User implements Serializable {
         this.userName=userName;
         this.email=email;
         this.passwort=passwort;
+        if(freezers==null) {
+            freezers = new ArrayList<>();
+        }
     }
     public User(String email,String passwort){
         this.passwort=passwort;

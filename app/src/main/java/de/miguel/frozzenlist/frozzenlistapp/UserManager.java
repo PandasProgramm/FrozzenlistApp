@@ -18,17 +18,14 @@ import java.util.ArrayList;
 
 public class UserManager {
 
-    public ArrayList<User> userList;
+    public ArrayList<User> userList=new ArrayList<>();;
 
     //Instance
     public UserManager(Context context){
         Hawk.init(context).build();
-        userList=new ArrayList<>();
         loadList();
 
     }
-
-
 
     public void saveList(){
 
