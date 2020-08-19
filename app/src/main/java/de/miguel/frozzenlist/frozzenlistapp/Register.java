@@ -73,35 +73,50 @@ public class Register extends AppCompatActivity {
         String newPasswortCommit = setControlPasswort.getText().toString();
 
         try {
-            for (int i = 0; i <= userManager.getUserList().size(); i++) {
-                if (!newUser.equals(userManager.getUserList().get(i).getUserName()) && !newEmail.equals(userManager.getUserList().get(i).getEmail())) {
-                    Log.d("Register", "no availible User(good)");
-                    if (newEmail.contains("@") && newEmail.contains(".")) {
-                        Log.d("Register", "it is a email");
-                        if (newPasswort.length() > 8) {
-                            Log.d("Register", "passwort length over 8 chars");
-                            if (newPasswort.equals(newPasswortCommit)) {
-                                Log.d("Register", "password confilm");
-                                user = new User(newUser, newEmail, newPasswort);
-                                userManager.addUser(user);
-                                Log.d("Register", "User add");
-                                Intent loginScreen = new Intent(Register.this, LoginActivityMain.class);
-                                startActivity(loginScreen);
+            if(!newUser.equals(null)&&!newEmail.equals(null)&&!newPasswort.equals(null)&&!newPasswortCommit.equals(null)) {
+                for (int i = 0; i <= userManager.getUserList().size(); i++) {
+                    if (!newUser.equals(userManager.getUserList().get(i).getUserName()) && !newEmail.equals(userManager.getUserList().get(i).getEmail())) {
+                        Log.d("Register", "no availible User(good)");
+                        if (newEmail.contains("@") && newEmail.contains(".")) {
+                            Log.d("Register", "it is a email");
+                            if (newPasswort.length() > 8) {
+                                Log.d("Register", "passwort length over 8 chars");
+                                if (newPasswort.equals(newPasswortCommit)) {
+                                    Log.d("Register", "password confilm");
+                                    user = new User(newUser, newEmail, newPasswort);
+                                    userManager.addUser(user);
+                                    Log.d("Register", "User add");
+                                    Intent loginScreen = new Intent(Register.this, LoginActivityMain.class);
+                                    startActivity(loginScreen);
 
+                                } else {
+                                    setControlPasswort.setError("Passwörter stimmen nicht überein");
+                                }
                             } else {
-                                setControlPasswort.setError("Passwörter stimmen nicht überein");
+                                setPasswort.setError("Passwort muss mindestens 8 Zeichen lang sein");
+
                             }
                         } else {
-                           setPasswort.setError("Passwort muss mindestens 8 Zeichen lang sein");
-
+                            inputEmail.setError("Die Emailadresse muss ein @ und einen Punkt enthalten");
                         }
+
                     } else {
-                        inputEmail.setError("Die Emailadresse muss ein @ und einen Punkt enthalten");
+                        inputName.setError("Dieser Nutzername ist schon vorhanden");
+
                     }
-
-                } else {
-                    inputName.setError("Dieser Nutzername ist schon vorhanden");
-
+                }
+            }else{
+                if(newUser.equals(null)){
+                    inputName.setError("Sie müssen eine Nutzereingabe tätigen");
+                }
+                if(newEmail.equals(null)){
+                    inputEmail.setError("Sie müssen eine Email eingeben");
+                }
+                if (newPasswort.equals(null)) {
+                    setPasswort.setError("Sie müssen ein Passwort eingeben");
+                }
+                if (newPasswortCommit.equals(null)) {
+                    setControlPasswort.setError("Bitte wiederholen Sie ihre Passworteingabe");
                 }
             }
         }catch(NullPointerException npe){
