@@ -58,10 +58,10 @@ public class LoginActivityMain extends Activity {
                 if(compareUser.getEmail().equals(user.getEmail())&&compareUser.getPasswort().
                         equals(user.getPasswort())){
                     Intent intent= new Intent(LoginActivityMain.this, FreezerManagment.class);
-                    Log.d("LoginActivityMain","jssj");
+                    Log.d("LoginActivityMain","before put extra");
                     intent.putExtra("position", i);
                     startActivity(intent);
-                    Log.d("LoginActivityMain","jjj");
+                    Log.d("LoginActivityMain","aktivity start");
                 }
                 else{
                     Log.d("LoginActivityMain","Stimmt mit keinem User überein");
