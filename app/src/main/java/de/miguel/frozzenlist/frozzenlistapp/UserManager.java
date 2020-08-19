@@ -3,6 +3,7 @@ package de.miguel.frozzenlist.frozzenlistapp;
 
 import android.content.Context;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -24,10 +25,10 @@ import java.util.ArrayList;
 
 public class UserManager {
 
-    private ArrayList<User> userList;
+    private ArrayList<User> userList=new ArrayList<>();
     OutputStream outputStream;
     ObjectOutputStream objectOutputStream;
-   public static final String FILENAME="userList.txt";
+    public File filename=new File("userList.txt");
 
     InputStream inputStream;
     ObjectInputStream objectInputStream;
@@ -35,7 +36,7 @@ public class UserManager {
 
     //Instance
     public UserManager(Context context){
-       // Hawk.init(context).build();
+
         loadList();
 
     }
@@ -46,7 +47,8 @@ public class UserManager {
 
 
         try {
-            outputStream= new FileOutputStream(FILENAME);
+
+            outputStream= new FileOutputStream(filename);
             objectOutputStream= new ObjectOutputStream(outputStream);
             objectOutputStream.writeObject(userList);
             objectOutputStream.flush();

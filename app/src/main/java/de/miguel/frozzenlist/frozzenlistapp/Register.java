@@ -17,7 +17,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -72,8 +71,8 @@ public class Register extends AppCompatActivity {
         String newPasswort = setPasswort.getText().toString();
         String newPasswortCommit = setControlPasswort.getText().toString();
 
-        try {
-            if(!newUser.equals(null)&&!newEmail.equals(null)&&!newPasswort.equals(null)&&!newPasswortCommit.equals(null)) {
+        if(!newUser.equals(null)&&!newEmail.equals(null)&&!newPasswort.equals(null)&&!newPasswortCommit.equals(null)) {
+
                 for (int i = 0; i <= userManager.getUserList().size(); i++) {
                     if (!newUser.equals(userManager.getUserList().get(i).getUserName()) && !newEmail.equals(userManager.getUserList().get(i).getEmail())) {
                         Log.d("Register", "no availible User(good)");
@@ -106,29 +105,20 @@ public class Register extends AppCompatActivity {
                     }
                 }
             }else{
-                if(newUser.equals(null)){
-                    inputName.setError("Sie müssen eine Nutzereingabe tätigen");
-                }
-                if(newEmail.equals(null)){
-                    inputEmail.setError("Sie müssen eine Email eingeben");
-                }
-                if (newPasswort.equals(null)) {
-                    setPasswort.setError("Sie müssen ein Passwort eingeben");
-                }
-                if (newPasswortCommit.equals(null)) {
-                    setControlPasswort.setError("Bitte wiederholen Sie ihre Passworteingabe");
-                }
+            if(newUser.equals(null)){
+                inputName.setError("Sie müssen eine Nutzereingabe tätigen");
             }
-        }catch(NullPointerException npe){
-            npe.fillInStackTrace();
-            Log.d("Register","Objektreferenz null");
-
-            Toast toast= Toast.makeText(this,"Der Nutzer kann nicht angelegt werden",Toast.LENGTH_LONG);
-        }catch (NumberFormatException nfe){
-            nfe.fillInStackTrace();
-            Log.d("Register","falsches Format");
-        }catch(ClassCastException cce){
-            cce.fillInStackTrace();
+            if(newEmail.equals(null)){
+                inputEmail.setError("Sie müssen eine Email eingeben");
+            }
+            if (newPasswort.equals(null)) {
+                setPasswort.setError("Sie müssen ein Passwort eingeben");
+            }
+            if (newPasswortCommit.equals(null)) {
+                setControlPasswort.setError("Bitte wiederholen Sie ihre Passworteingabe");
+            }
         }
+
     }
+
 }
