@@ -60,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder( ViewHolder holder, int position) {
 
-        holder.textView.setText(userManager.getUserList().get(position).freezers.get(position).getName()+
+        holder.textView.setText(userManager.userList.get(position).freezers.get(position).getName()+
                      " hat "+ userManager.getUserList().get(position).freezers.get(position).tray+ " Fächer");
 
     }

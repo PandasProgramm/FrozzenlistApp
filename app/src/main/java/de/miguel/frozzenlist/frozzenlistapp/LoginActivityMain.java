@@ -51,10 +51,10 @@ public class LoginActivityMain extends Activity {
 
         if(!userEmail.isEmpty()&&!passwort.isEmpty()) {
             UserManager userManager= new UserManager(this);
-            User user= new User(passwort,userEmail);
-            for(int i = 0; i< userManager.getUserList().size(); i++){
+            User user= new User(userEmail,passwort);
+            for(int i = 0; i< userManager.userList.size(); i++){
 
-                User compareUser= userManager.getUserList().get(i);
+                User compareUser= userManager.userList.get(i);
                 if(compareUser.getEmail().equals(user.getEmail())&&compareUser.getPasswort().
                         equals(user.getPasswort())){
                     Intent intent= new Intent(LoginActivityMain.this, FreezerManagment.class);
